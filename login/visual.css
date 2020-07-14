@@ -1,0 +1,20 @@
+body{
+    position: absolute;
+    width: auto;
+    height: auto;
+    margin-left: 40%;
+    margin-right: auto;
+}
+div{
+    border: 1px solid rgb(96, 172, 165);
+    background-color: rgb(188, 193, 238);
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+
+}
+button{
+   margin-left: 35%;       
+}
