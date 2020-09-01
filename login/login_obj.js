@@ -4,8 +4,13 @@ var objLogin = [
         senha: "123456",
         email:"marcosvsantos08@gmail.com"
     },
-    
+    {
+        usuario:"adm",
+        senha:"adm123",
+        email:"adm@adm.com"
+    }
 ]
+
  function getLogin(){
     var usuario = document.getElementById("usuario").value
     var senha = document.getElementById("senha").value
@@ -17,24 +22,26 @@ var objLogin = [
     }
   }
   alert("usuario ou senha incorreto!")
-
  }
+//  Cadastro de usuario
+ let user = document.getElementById("user");
+ let pass = document.getElementById("pass1");
+ let pas1 = document.getElementById("pass2");
+ let mail = document.getElementById("email");
+ 
+ function Person(user, pass,mail) {
+     this.usuario = user;
+     this.senha = pass;
+     this.email = mail;
+     
+   }
+ 
  function cadastrar(){
-    let user=getElementById("user").value
-    let pass=getElementById("pass1").value
-    let pass1=getElementById("pass2").value
-    let mail=getElementById("email").value
-    
-    for (let n=0; n < objLogin.length;n++){
-        if (user==objLogin[n].usuario && mail==objLogin[n].email){
-           alert(`Usuario ou email ja existem`)
-        }else if(pass!==pass1){
-            alert(`Verifique a senha`)
-        }else{
-            objLogin.usuario.push(user)
-            objLogin.senha.push(pass)
-            objLogin.email.push(mail)
-            location.href = "file:///C:/Users/marco/OneDrive/Documentos/PROJETOS/login/login.html";
-        }
+ 
+     
+     var user1 = new Person(user.value, pass.value, mail.value )
+     objLogin.push(user1)
+ 
+     alert(Object.values(objLogin[objLogin.length-1]))
+ 
  }
-}
